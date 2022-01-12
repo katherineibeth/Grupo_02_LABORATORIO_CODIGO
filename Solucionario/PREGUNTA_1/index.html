@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>PREGUNTA1</title>
+		<style type="text/css">
+			#background{position:absolute; width:99%; height:130%;}
+			#fixed {position:absolute; top: 0px; left: 0px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img id="background" src="Imagenes/fondo.jpg"/> 
+		</div>
+		<div id="fixed">
+			</br></br></br>
+			<div style="padding-left:510px;">
+				<img src="Imagenes/selloespe.jpg" alt="ESPE" height="100" >
+			</div>
+			<div style="padding-left:395px;">
+				<h2>
+					<p style="text-align: center" style="color:#165014" ;>DEPARTAMENTO DE CIENCIAS DE LA COMPUTACIÓN</p>
+					<p style="text-align: center" style="color:#165014" ;>INGENIERÍA EN SISTEMAS E INFORMÁTICA</p>
+				</h2>
+				<h3>
+					<p style="text-align: center" style="color:#165014" ;>APLICACION DE TECNOLOGIAS WEB</p>
+				</h3>
+			</div>
+			
+			
+			
+				<div style="padding-left:250px;">
+					
+					<br>
+					<br>
+					
+					<h1>PREGUNTA 1</h1>	
+					
+					<p style="color: #22247D"> 1. Analizar una cadena de texto en un objeto DOM XML y extraer esa
+ 					Información con JavaScript</p>
+	
+			<br	
+	
+				<form id="frm1" action="/action_page.php">
+				<button id="PREGUNTA1" name="subject" type="submit" value="fav_HTML">CADENA DE TEXTO =>  titulo: soy una cadena de texto + Autor: creada para prueba por autor anonimo + Año: en el año 2022</button>
+				</form>
+
+				<p>DAR CLIC EN CADA BOTON PARA MOSTRAR LA INFORMACION DE LAS DIFERENTES CADENAS </p>
+
+				<button onclick="myFunction()">CADENA1</button>
+
+				<button onclick="myFunction1()">CADENA2</button>
+				
+				<button onclick="myFunction2()">CADENA3</button>
+
+	
+	
+	
+
+<script>
+
+</script>
+
+	
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+
+
+<script>
+var parser, xmlDoc;
+var cadenadetexto = "<bookstore><book>" +
+"<title>soy una cadena de texto</title>" +
+"<author>creada para prueba por autor anonimo </author>" +
+"<year>en el anio 2022</year>" +
+"</book></bookstore>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(cadenadetexto,"text/xml");
+
+
+
+
+	
+	function myFunction() {
+  var x = document.getElementById("demo").innerHTML = xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+  document.getElementById("demo").innerHTML = x;
+}
+		function myFunction1() {
+  var x = document.getElementById("demo1").innerHTML = xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue;
+  document.getElementById("demo1").innerHTML = x;
+}
+	
+		function myFunction2() {
+  var x = document.getElementById("demo2").innerHTML = xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue;
+  document.getElementById("demo2").innerHTML = x;
+}
+	
+</script>	
+	
+					
+					
+					
+				</div>
+			</div>						
+		</div> 		
+	</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<cliente>
+  <nombre>Jefferson</nombre>
+  <apellido>Nolasco</apellido>
+  <telefono>2316474</telefono>
+  <email>jnolasco@espe.edu.ec</email>
+</cliente>

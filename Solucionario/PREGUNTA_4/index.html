@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>PREGUNTA2</title>
+		<style type="text/css">
+			#background{position:absolute; width:99%; height:130%;}
+			#fixed {position:absolute; top: 0px; left: 0px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img id="background" src="Imagenes/fondo.jpg"/> 
+		</div>
+		<div id="fixed">
+			</br></br></br>
+			<div style="padding-left:510px;">
+				<img src="Imagenes/selloespe.jpg" alt="ESPE" height="100" >
+			</div>
+			<div style="padding-left:395px;">
+				<h2>
+					<p style="text-align: center" style="color:#165014" ;>DEPARTAMENTO DE CIENCIAS DE LA COMPUTACIÓN</p>
+					<p style="text-align: center" style="color:#165014" ;>INGENIERÍA EN SISTEMAS E INFORMÁTICA</p>
+				</h2>
+				<h3>
+					<p style="text-align: center" style="color:#165014" ;>APLICACION DE TECNOLOGIAS WEB</p>
+				</h3>
+			</div>
+			
+			
+			
+				<div style="padding-left:250px;">
+												
+					<h1>PREGUNTA 4</h1>	
+					
+					<p style="color: #22247D">4.Mostrar datos XML en una tabla utilizando AJAX.:
+					
+			<br>	
+	
+				<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<body>
+
+<h2>Tabla de tipos de animales</h2>
+
+<button type="button" onclick="loadDoc()">click desplegar tabla</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    myFunction(this);
+  }
+  xhttp.open("GET", "cd_catalog.xml");
+  xhttp.send();
+}
+function myFunction(xml) {
+  const xmlDoc = xml.responseXML;
+  const x = xmlDoc.getElementsByTagName("CD");
+  let table="<tr><th>tipo</th><th>animal</th><th>pais</th></tr>";
+  for (let i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +    "</td><td>" +
+	x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +    "</td><td>" +	
+    x[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +    "</td></tr>";
+	
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+
+</body>
+					
+					
+					
+				</div>
+			</div>						
+				
+	</body>
+</html>
